@@ -20,3 +20,5 @@ Song.create(title: "Detach",
 				artist: "Hans Zimmer",
 				length: "6:00",
 				release_year: 2014)
+Award.create(name: "Premio 1", category: "Heavy", year: 2015)
+Award.create(name: "Premio 2", category: "Hardcore", year: 2014)
