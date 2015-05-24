@@ -1,4 +1,5 @@
-class Stars < ActiveRecord::Base
+class Star < ActiveRecord::Base
 	has_many :performances
 	has_many :movies, through: :performances
+	has_many :awards, as: :winnable
 end

@@ -6,7 +6,7 @@ class CreateAwards < ActiveRecord::Migration
       t.integer :year
       t.integer :winnr
       t.integer :winnable_id
-      t.string :winnable_type
+      t.string  :winnable_type
 
       t.timestamps
     end

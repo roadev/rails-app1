@@ -11,7 +11,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150521220758) do
+ActiveRecord::Schema.define(version: 20150524205627) do
+
+  create_table "awards", force: true do |t|
+    t.string   "name"
+    t.string   "category"
+    t.integer  "year"
+    t.integer  "winnr"
+    t.integer  "winnable_id"
+    t.string   "winnable_type"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "movies", force: true do |t|
     t.string   "title"
@@ -22,6 +33,11 @@ ActiveRecord::Schema.define(version: 20150521220758) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "genre"
+  end
+
+  create_table "movies_songs", force: true do |t|
+    t.integer "movie_id"
+    t.integer "song_id"
   end
 
   create_table "performances", force: true do |t|
