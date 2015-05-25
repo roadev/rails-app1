@@ -3,5 +3,5 @@ class Star < ActiveRecord::Base
 	has_many :movies, through: :performances
 	has_many :awards, as: :winnable
 
-	validates :name, presences: true
+	validates :name, presence: true
 end
